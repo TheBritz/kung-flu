@@ -1,6 +1,7 @@
 extends Node2D
 
 const PORT = 32420
+const SERVER_HOST = "172.2.0.218"
 
 var peer = ENetMultiplayerPeer.new()
 @export var player_scene: PackedScene
@@ -15,7 +16,7 @@ func _ready() -> void:
 		serverProps.name = "ServerProperties"
 		add_child(serverProps)
 	else:
-		peer.create_client("localhost", PORT)
+		peer.create_client(SERVER_HOST, PORT)
 		multiplayer.multiplayer_peer = peer
 	
 func _add_player(id = 1):
