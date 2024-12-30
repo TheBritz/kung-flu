@@ -9,6 +9,5 @@ func _enter_tree():
 func _physics_process(delta):
 	if is_multiplayer_authority():
 		var playerSpeed = serverProperties.PlayerSpeed if serverProperties.PlayerSpeed else 400
-		print(playerSpeed)
 		velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * playerSpeed
 	move_and_slide() 

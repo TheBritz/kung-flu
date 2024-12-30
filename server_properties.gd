@@ -1,9 +1,13 @@
 extends Node
 
+var capsRegex: RegEx = RegEx.new()
+
+#Server properties should be defined here and be Pascale case
 @export var PlayerSpeed = 400
 var label: RichTextLabel = null
 
 func _ready() -> void:
+	capsRegex.compile('^[A-Z]')
 	if multiplayer.is_server:
 		print("Server properties created")
 	else:
@@ -23,6 +27,7 @@ func _process(delta: float) -> void:
 	var thisScript: GDScript = get_script()
 	for propertyInfo in thisScript.get_script_property_list():
 		var propertyName: String = propertyInfo.name
-		var propertyValue = get(propertyName)
-		label.text = label.text + propertyName + " = " + str(propertyValue) + "\n"
-	
+		var result = capsRegex.search(propertyName)
+		if result:
+			var propertyValue = get(propertyName)
+			label.text = label.text + propertyName + " = " + str(propertyValue) + "\n"
