@@ -9,7 +9,7 @@ func _enter_tree():
 func _physics_process(delta):
 	if is_multiplayer_authority():
 		# Gather base acceleration input, multiplied by PlayerBaseAcceleration
-		var inputAcc = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * serverProperties.PlayerAccelBase #playerSpeed
+		var inputAcc = Input.get_vector("left", "right", "up", "down") * serverProperties.PlayerAccelBase #playerSpeed
 		
 		# Break input into x and y
 		var xAcc = inputAcc.x
