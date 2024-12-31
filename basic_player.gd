@@ -15,6 +15,12 @@ func _physics_process(delta):
 		var xAcc = inputAcc.x
 		var yAcc = inputAcc.y
 		
+		# Handle change of direction
+		if velocity.x != 0 && inputAcc.x != 0 && sign(inputAcc.x) != sign(velocity.x):
+			xAcc *= serverProperties.PlayerAccelChangeOfDirMult
+		if velocity.y != 0 && inputAcc.y != 0 && sign(inputAcc.y) != sign(velocity.y):
+			yAcc *= serverProperties.PlayerAccelChangeOfDirMult
+		
 		# Handle decceleration
 		if inputAcc.x == 0:
 			if inputAcc.y == 0:

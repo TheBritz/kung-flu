@@ -3,10 +3,16 @@ extends Node
 var capsRegex: RegEx = RegEx.new()
 var label: RichTextLabel = null
 
-#Server properties should be defined here and be Pascale case
+#Server properties should be defined here and be Pascal case
+# Max player speed
 @export var PlayerSpeed = 400
+# Base acceleration rate
 @export var PlayerAccelBase = 25
+# Multiplier applied to acceleration when changing direction
+@export var PlayerAccelChangeOfDirMult = 4
+# Decceleration ratio per frame when no inputs are active
 @export var PlayerDeccelDrift = .05
+# Decceleration ratio per frame when inputs are active
 @export var PlayerDeccelActive = .1
 @export var PlayerHealth = 100
 
