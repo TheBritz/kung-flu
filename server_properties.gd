@@ -1,10 +1,11 @@
 extends Node
 
 var capsRegex: RegEx = RegEx.new()
+var label: RichTextLabel = null
 
 #Server properties should be defined here and be Pascale case
 @export var PlayerSpeed = 400
-var label: RichTextLabel = null
+@export var PlayerHealth = 100
 
 func _ready() -> void:
 	capsRegex.compile('^[A-Z]')
