@@ -13,12 +13,18 @@ This project is implemented with a server-controlled architecture so that group 
 1. Open the `server_properties.gd` file
 2. Add an `export` variable, with a pascale-case title (like camelcase but first letter is capatalized too)
    - Give it a logical default value
+
 ![image](https://github.com/user-attachments/assets/66ec4894-981e-45bd-b93f-4673b3b0b9cb)
+
 3. Open the `server_properties.tcsn` scene file
 4. Click on the **MultiplayerSynchronizer**
 5. Click the **Add property to sync...** button
+
 ![image](https://github.com/user-attachments/assets/7a84521f-2ccd-4ad5-a057-9c408aa5d514)
+
 6. On the Pick a node to synchronize dialog, double-click the **ServerProperties** node
 7. Under Matches, select the new server property you just added
+
 ![image](https://github.com/user-attachments/assets/24ad19e6-e548-46a7-9611-e95b7d1ae1b1)
+
 8. Click **Open**
