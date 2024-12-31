@@ -4,6 +4,16 @@ This is a small-scale game effort intended to develop a process and get back int
 ## Basic Overview
 You play as a white blood cell. Your job is to destroy bacteria while avoiding viruses. You move to dodge and enlarge yourself to envelop and devour bacteria.
 
+# Getting Started
+1. Install [git](https://git-scm.com/downloads)
+2. Launch a git bash terminal
+3. Clone this repo down into a working directory and run the quickstart script:
+```bash
+git clone https://github.com/TheBritz/kung-flu.git
+cd kung-flu
+./quickstart.sh
+```
+
 # Dev Guide
 
 ## ServerProperties
