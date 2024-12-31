@@ -5,6 +5,9 @@ var label: RichTextLabel = null
 
 #Server properties should be defined here and be Pascale case
 @export var PlayerSpeed = 400
+@export var PlayerAccelBase = 25
+@export var PlayerDeccelDrift = .05
+@export var PlayerDeccelActive = .1
 @export var PlayerHealth = 100
 
 func _ready() -> void:
