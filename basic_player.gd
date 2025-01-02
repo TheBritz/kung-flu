@@ -35,6 +35,8 @@ func _physics_process(delta):
 		elif inputAcc.y == 0:
 			# Active decceleration
 			yAcc = -velocity.y * serverProperties.PlayerDeccelActive
+			
+		# Apply modified acceleration values
 		velocity.x += xAcc
 		velocity.y += yAcc
 		
