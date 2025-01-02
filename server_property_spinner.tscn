@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fbfy0hvjuhfj"]
+
+[ext_resource type="Script" path="res://server_property_spinner.gd" id="1_ab0yd"]
+
+[node name="ServerPropertySpinner" type="SpinBox"]
+offset_right = 83.0625
+offset_bottom = 31.0
+script = ExtResource("1_ab0yd")
