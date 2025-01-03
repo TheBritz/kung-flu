@@ -1,0 +1,67 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "340227046",
+    "Type": "User",
+    "GUID": "{D5ADFF9F-18FB-4B9E-B514-E509D2C021B2}",
+    "Language": "SFX",
+    "Hash": "{F3A04D51-2A03-E426-B1CE-5BEF6570CB23}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Scene01",
+    "ShortName": "Scene01",
+    "Path": "Scene01.bnk",
+    "Media": [
+     {
+      "Id": "343710938",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HRDS DRONE - Guitar Buzzing Feedback Rings.wav",
+      "CachePath": "D9/{D9748344-33BF-A9E4-DE05-3D5C35EE3CFC}.wem"
+     },
+     {
+      "Id": "455809857",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUI CONFIRM LARGE Access.wav",
+      "CachePath": "CA/{CA63392E-1CF4-7134-D122-A3CDC04A622A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3740254892",
+      "Name": "StaticSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Scene01\\StaticSound",
+      "GUID": "{5B3C90D9-1A13-4C02-BC86-A997A145E1DD}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "343710938"
+       }
+      ]
+     },
+     {
+      "Id": "38624190",
+      "Name": "TestSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Scene01\\TestSound",
+      "GUID": "{E0225E46-34F4-47C0-A8D0-35D7E4FBADC8}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.985472",
+      "DurationMax": "2.985472",
+      "MediaRefs": [
+       {
+        "Id": "455809857"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8008D4AA-8586-2ED5-A520-A4B122F297B8}"
+ }
+}

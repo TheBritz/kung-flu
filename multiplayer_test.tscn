@@ -10,3 +10,19 @@ player_scene = ExtResource("2_c7lli")
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://basic_player.tscn", "res://server_properties.tscn")
 spawn_path = NodePath("..")
+
+[node name="AkTestBank" type="AkBank" parent="."]
+bank = {
+"id": 340227046,
+"name": "Scene01"
+}
+load_on = 1
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="AkTestSound" type="AkEvent2D" parent="."]
+event = {
+"id": 38624190,
+"name": "TestSound"
+}
+trigger_on = 2

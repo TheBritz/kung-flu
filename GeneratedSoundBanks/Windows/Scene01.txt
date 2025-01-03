@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	38624190	TestSound			\Default Work Unit\Scene01\TestSound	
+	3740254892	StaticSound			\Default Work Unit\Scene01\StaticSound	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	343710938	HRDS DRONE - Guitar Buzzing Feedback Rings	C:\Users\offic\Desktop\Desktop\Work\Godot Projects\WwiseSession_Host Join Test 1_4.3_2024.1\.cache\D9\{D9748344-33BF-A9E4-DE05-3D5C35EE3CFC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\StaticSound\HRDS DRONE - Guitar Buzzing Feedback Rings		22892440
+	455809857	MUI CONFIRM LARGE Access	C:\Users\offic\Desktop\Desktop\Work\Godot Projects\WwiseSession_Host Join Test 1_4.3_2024.1\.cache\CA\{CA63392E-1CF4-7134-D122-A3CDC04A622A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TestSound\MUI CONFIRM LARGE Access		573304
+
