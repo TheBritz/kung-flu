@@ -12,7 +12,7 @@ func _init() -> void:
 
 static func create(serverPropertyName: String, serverPropertyValue: float) -> ServerPropertySpinner:
 	var spinner: ServerPropertySpinner = scene.instantiate()
-	if serverPropertyValue < .1:
+	if serverPropertyValue < .5:
 		spinner.step = .01
 	elif serverPropertyValue < 1:
 		spinner.step = .1

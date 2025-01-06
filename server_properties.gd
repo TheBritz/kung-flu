@@ -20,38 +20,28 @@ var label: RichTextLabel = null
 
 func _ready() -> void:
 	capsRegex.compile('^[A-Z]')
-	if multiplayer.is_server:
-		print("Server properties created")
+	if Global.isServer:
+		var thisScript: GDScript = get_script()
+		var textY: float = 10
+		for propertyInfo in thisScript.get_script_property_list():
+			var propertyName: String = propertyInfo.name
+			var result = capsRegex.search(propertyName)
+			if result:
+				var propertyValue = get(propertyName)
+				var spinner: ServerPropertySpinner = ServerPropertySpinner.create(propertyName, float(propertyValue))
+				add_child(spinner)
+				spinner.position = Vector2(10, textY)
+				textY+=50
 	else:
-		print("Remove server properties synced")
-	#label = get_node("ServerPropertiesDisplay")
-	label = get_child(1) as RichTextLabel
-	label.text = str(PlayerSpeed)
-	var thisScript: GDScript = get_script()
-	var textY: float = 0
-	for propertyInfo in thisScript.get_script_property_list():
-		var propertyName: String = propertyInfo.name
-		var result = capsRegex.search(propertyName)
-		if result:
-			var propertyValue = get(propertyName)
-			label.text = label.text + propertyName + " = " + str(propertyValue) + "\n"
-			var spinner: ServerPropertySpinner = ServerPropertySpinner.create(propertyName, float(propertyValue))
-			add_child(spinner)
-			spinner.position = Vector2(200, textY)
-			textY+=50 
-	
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_up"):
-		PlayerSpeed += 25
-	if Input.is_action_just_pressed("ui_down"):
-		PlayerSpeed -= 25
+		label = get_child(1)
 
 func _process(delta: float) -> void:
-	label.text = ""
-	var thisScript: GDScript = get_script()
-	for propertyInfo in thisScript.get_script_property_list():
-		var propertyName: String = propertyInfo.name
-		var result = capsRegex.search(propertyName)
-		if result:
-			var propertyValue = get(propertyName)
-			label.text = label.text + propertyName + " = " + str(propertyValue) + "\n"
+	if !Global.isServer:
+		label.text = ""
+		var thisScript: GDScript = get_script()
+		for propertyInfo in thisScript.get_script_property_list():
+			var propertyName: String = propertyInfo.name
+			var result = capsRegex.search(propertyName)
+			if result:
+				var propertyValue = get(propertyName)
+				label.text = label.text + propertyName + " = " + str(propertyValue) + "\n"
