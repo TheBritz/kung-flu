@@ -18,10 +18,15 @@ config/icon="res://icon.svg"
 [autoload]
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+Global="*res://Global.gd"
 
 [dotnet]
 
 project/assembly_name="Kung Flu"
+
+[editor]
+
+run/main_run_args="-s"
 
 [editor_plugins]
 
