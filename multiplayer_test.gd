@@ -28,7 +28,9 @@ func _ready() -> void:
 		add_child(serverProps)
 	else:
 		Global.isServer = false		
-		peer.create_client(serverHost, port)
+		var connected = peer.create_client(serverHost, port)
+		if connected != 0:
+			print("Failed to connect to server!")
 		multiplayer.multiplayer_peer = peer
 	
 func _add_player(id = 1):

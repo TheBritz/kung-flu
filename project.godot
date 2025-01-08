@@ -24,10 +24,6 @@ Global="*res://Global.gd"
 
 project/assembly_name="Kung Flu"
 
-[editor]
-
-run/main_run_args="-s"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Wwise/plugin.cfg")
