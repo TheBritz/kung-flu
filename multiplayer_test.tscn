@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0q6eqb1du7u1"]
+[gd_scene load_steps=4 format=3 uid="uid://c0q6eqb1du7u1"]
 
 [ext_resource type="Script" path="res://multiplayer_test.gd" id="1_a8jvg"]
 [ext_resource type="PackedScene" uid="uid://chcyubyrf7egy" path="res://basic_player.tscn" id="2_c7lli"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ocds6"]
+custom_solver_bias = 1.0
+distance = 4.0
 
 [node name="Multiplayer_Test" type="Node2D"]
 script = ExtResource("1_a8jvg")
@@ -26,3 +30,9 @@ event = {
 "name": "TestSound"
 }
 trigger_on = 2
+
+[node name="BottomBound" type="StaticBody2D" parent="."]
+position = Vector2(-4, 157)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBound"]
+shape = SubResource("WorldBoundaryShape2D_ocds6")

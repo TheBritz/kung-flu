@@ -5,6 +5,11 @@ var serverProperties: Node
 func _enter_tree():
 	set_multiplayer_authority(name.to_int())
 	serverProperties = get_node("../ServerProperties")
+	var camera = get_node("./Camera2D")
+	if is_multiplayer_authority():
+		camera.set_enabled(true)
+	else:
+		camera.set_enabled(false)
 
 func _physics_process(delta):
 	if is_multiplayer_authority():
