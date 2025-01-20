@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://chcyubyrf7egy"]
+[gd_scene load_steps=5 format=3 uid="uid://chcyubyrf7egy"]
 
 [ext_resource type="Script" path="res://basic_player.gd" id="1_m0to7"]
 [ext_resource type="Texture2D" uid="uid://b4clbiq55kaah" path="res://wbc.png" id="2_jvxv3"]
@@ -7,6 +7,8 @@
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h5x16"]
 
 [node name="basic_player" type="CharacterBody2D"]
 script = ExtResource("1_m0to7")
@@ -19,3 +21,6 @@ replication_config = SubResource("SceneReplicationConfig_aikq3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_speed = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h5x16")
