@@ -17,6 +17,8 @@ var label: RichTextLabel = null
 # Decceleration ratio per frame when inputs are active
 @export var PlayerDeccelActive = .1
 @export var PlayerHealth = 100
+@export var RoomWidth: float = 2000
+@export var RoomHeight: float = 1500
 
 func _ready() -> void:
 	capsRegex.compile('^[A-Z]')
